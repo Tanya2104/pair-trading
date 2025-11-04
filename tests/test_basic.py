@@ -9,12 +9,12 @@ import os
 class TestBasicFunctionality(unittest.TestCase):
     
     def test_data_file_exists(self):
-        """Проверка существования файла с данными"""
+        #Проверка существования файла с данными
         self.assertTrue(os.path.exists('data/stocks_prices.csv'), 
                        "Файл data/stocks_prices.csv должен существовать")
     
     def test_data_loading(self):
-        """Проверка загрузки данных"""
+        #Проверка загрузки данных
         try:
             from src.data_fetcher import DataFetcher
             fetcher = DataFetcher()

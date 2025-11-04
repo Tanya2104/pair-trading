@@ -16,8 +16,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def main():
-    """Основная функция запуска анализа"""
-    logger.info("=== ЗАПУСК АНАЛИЗА КОИНТЕГРАЦИИ ===")
+    #Основная функция запуска анализа
+    logger.info("Запуск анализа коинтеграции")
     
     try:
         # 1. Загрузка данных
@@ -47,7 +47,7 @@ def main():
         logger.info(f"   - Торговых дней: {len(clean_data)}")
         logger.info(f"   - Акции: {', '.join(clean_data.columns.tolist()[:5])}...")
         
-        logger.info("=== БАЗОВЫЙ АНАЛИЗ ЗАВЕРШЕН ===")
+        logger.info("Базовый анализ завершён")
         logger.info("Для полного анализа коинтеграции дополните функционал")
         
     except Exception as e:

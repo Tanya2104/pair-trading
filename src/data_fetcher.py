@@ -8,13 +8,13 @@ import logging
 logger = logging.getLogger(__name__)
 
 class DataFetcher:
-    """Класс для работы с данными о ценах акций"""
+    #Класс для работы с данными о ценах акций
     
     def __init__(self):
         self.data = None
     
     def load_from_csv(self, filepath='stocks_prices.csv'):
-        """Загрузка данных из CSV файла"""
+        #Загрузка данных из CSV файла
         try:
             self.data = pd.read_csv(filepath, index_col=0, parse_dates=True)
             logger.info(f"Данные загружены: {self.data.shape[1]} акций, {self.data.shape[0]} дней")
@@ -24,7 +24,7 @@ class DataFetcher:
             return None
     
     def prepare_data(self, min_data_points=50):
-        """Подготовка данных для анализа"""
+        #Подготовка данных для анализа
         if self.data is None:
             logger.error("Данные не загружены")
             return None
@@ -39,7 +39,7 @@ class DataFetcher:
         return clean_data
     
     def get_tickers(self):
-        """Получить список тикеров"""
+        #Получить список тикеров
         if self.data is not None:
             return self.data.columns.tolist()
         return []
