@@ -18,8 +18,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 def main():
-    #Основная функция запуска анализа
-    logger.info("Запуск анализа коинтеграции")
+    """Основная функция запуска анализа"""
+    logger.info("=== ЗАПУСК АНАЛИЗА КОИНТЕГРАЦИИ ===")
     
     try:
         # 1. Загрузка данных
@@ -49,10 +49,6 @@ def main():
         logger.info(f"   - Торговых дней: {len(clean_data)}")
         logger.info(f"   - Акции: {', '.join(clean_data.columns.tolist()[:5])}...")
         
-<<<<<<< HEAD
-        logger.info("Базовый анализ завершён")
-        logger.info("Для полного анализа коинтеграции дополните функционал")
-=======
         # 3. Анализ коинтеграции
         logger.info("3. Поиск коинтегрированных пар...")
         from src.cointegration_tester import CointegrationTester
@@ -87,7 +83,6 @@ def main():
         save_results(cointegrated_pairs, clean_data)
         
         logger.info("=== АНАЛИЗ ЗАВЕРШЕН УСПЕШНО ===")
->>>>>>> feature/cointegration-analysis
         
     except Exception as e:
         logger.error(f"Критическая ошибка: {e}")
