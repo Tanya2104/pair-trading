@@ -53,7 +53,7 @@ try:
     print(prices.head())
     
     # Сохраняем
-    prices.to_csv('stocks_prices.csv')
+    prices.to_csv('data/stocks_prices.csv')
     print(f"\nДанные сохранены в 'stocks_prices.csv'")
     print("Файл перезаписан (старые данные удалены)")
     
