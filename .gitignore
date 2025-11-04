@@ -1,3 +1,13 @@
+# Data
+*.csv
+*.json
+*.pkl
+*.parquet
+
+# Logs
+*.log
+logs/
+
 # Python
 __pycache__/
 *.py[cod]
@@ -20,21 +30,12 @@ wheels/
 .installed.cfg
 *.egg
 
-# Virtual environment
-venv/
-env/
-
-# IDE
+# IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Data files
-data/
-*.csv
-*.xlsx
-*.pkl
-
-# Environment variables
-.env
+# OS
+.DS_Store
+Thumbs.db
